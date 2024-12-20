@@ -1,0 +1,9 @@
+function createHelloWorld(){
+    function HelloWorld(){
+        return "Hello World"
+    }
+    return HelloWorld
+}
+
+let msg=createHelloWorld()
+console.log(msg())
