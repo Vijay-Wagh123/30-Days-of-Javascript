@@ -1,0 +1,15 @@
+var isPalindrome = function(x) {
+    let temp=x
+    let sum=0
+    while(x>0){
+        let rev=x%10
+        sum=sum*10+rev
+        x= Math.floor(x/10)
+    }
+    if(temp===sum){
+        return true
+    }
+    else{
+        return false
+    }
+};
