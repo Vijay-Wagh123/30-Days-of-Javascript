@@ -1,0 +1,13 @@
+class Solution {
+    // Function to find the missing number in the array.
+    missingNumber(arr) {
+        const n=arr.length+1;
+        const actual_sum=(n*(n+1)/2)
+        
+        const given_sum=arr.reduce((acc,sum)=>{
+            return acc+sum
+        },0);
+        
+        return actual_sum-given_sum;
+    }
+}
