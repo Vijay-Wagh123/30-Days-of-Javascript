@@ -1,0 +1,16 @@
+class Solution {
+    // Function to find equilibrium point in the array.
+    equilibriumPoint(arr) {
+        let totalsum=arr.reduce((acc,sum)=>{
+            return acc+sum
+        },0)
+        let sum=0;
+        for(let i=0;i<arr.length;i++){
+            if(sum===totalsum-arr[i]-sum){
+                return i+1;
+            }
+            sum+=arr[i];
+        }
+        return -1;
+    }
+}
